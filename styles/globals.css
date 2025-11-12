@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@layer base {
+
+  html,
+  body {
+    font-family: "Nunito", sans-serif;
+    @apply text-gray-900 bg-white;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+  @apply max-w-[1100px] w-full mx-auto
+}
+
+.fill-star {
+  background-image: url('/icons/fill-star.svg');
+}
+
+        .km{
+            background-image:url('/icons/km.svg');
+        }
+
+        .auto{
+            background-image:url('/icons/automatic.svg');
+        }
+
+        .date{
+            background-image:url('/icons/date.svg');
+        }
+
+        .oil{
+            background-image:url('/icons/fuel-type.svg');
+        }
+
+        .hp{
+            background-image:url('/icons/kilometer.svg');
+        }
+
+        .user{
+            background-image:url('/icons/user.svg');
+        }
+
+        .no-scroll{
+            scrollbar-width:none;
+        }
+
+        .no-scroll {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;     /* Firefox */
+        }
+        .no-scroll::-webkit-scrollbar {
+            display: none;             /* Chrome, Safari, Opera */
+        }
+
+.car-grid{
+  grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
+}
+
+.color-grid{ 
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+.card-grid{
+  grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
+}
+
+        .dropdown::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 6px rgba(168, 165, 165, 0.3);
+            border-radius: 6px;
+            background-color: #fff;
+        }
+
+        .dropdown::-webkit-scrollbar{
+            width: 10px;
+        }
+
+        .dropdown::-webkit-scrollbar-thumb{
+            border-radius: 6px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #347DFF;
+        }
+
+.beige{
+  border-color:#dbaf6e !important;
+  background-color:#dbaf6e !important;
+}
+
+.blue-custom{
+  border-color:#0059B2 !important;
+  background-color: #0059B2 !important;
+}
+
+.brown{
+  border-color: #994200 !important;
+  background-color: #994200 !important;
+}
+
+.bronze{
+    border-color: #BF7326 !important;
+    background-color: #BF7326 !important;
+}
+
+.yellow{
+    border-color: #F7C81E !important;
+    background-color: #F7C81E !important;
+}
+
+.gold{
+  border-color:#D9A600 !important;
+  background-color:#D9A600 !important;
+}
+
+.gray-custom{
+  border-color: #949494 !important;
+  background-color: #949494 !important;
+}
+
+.green-custom{
+  border-color:#38A614 !important;
+  background-color: #38A614 !important;
+}
+
+.orange{
+  border-color:#FF7500 !important;
+  background-color:#FF7500 !important
+}
+
+.red-custom{
+  border-color:#D91A2A !important;
+  background-color:#D91A2A !important;
+}
+
+.black{
+  border-color:#000000 !important;
+  background-color:#000000 !important;
+}
+
+.silver{
+  border-color: #ACACAC !important;
+  background-color: #ACACAC !important;
+}
+
+.purple{
+  border-color: #991289 !important;
+  background-color: #991289 !important;
+}
+
+.select {
+  @apply w-full h-12 rounded-sm border border-neutral-400 transition-all ease-in-out duration-300 focus:border-blue-500 text-left
+}
+
+.select-dropdown {
+  @apply absolute z-10 w-full mt-1 overflow-y-auto transition-all duration-300 ease-in-out bg-white border rounded-md border-neutral-400 max-h-0 shadow-[0px_15px_40px_2px_rgba(133,133,133,0.10)];
+}
+
+.primary-btn {
+  @apply bg-blue-500 transition-all ease-in-out px-6 duration-300 hover:bg-blue-700 rounded-md font-medium text-white cursor-pointer hover:rounded-3xl;
+}
+
+.secondary-btn {
+  @apply px-6 text-base font-semibold leading-[48px] text-blue-500 transition-all duration-300 ease-in-out bg-transparent border border-blue-500 rounded-md hover:bg-blue-500 hover:rounded-3xl hover:text-white;
+}
+
+.primary-btn-sm{
+    @apply px-4 text-sm font-semibold leading-9 transition-all duration-300 ease-in-out bg-blue-500 rounded-md h-9 text-neutral-50 hover:bg-blue-700 hover:rounded-3xl;
+}
+
+.secondary-btn-sm{
+    @apply px-4 text-sm font-semibold leading-9 text-blue-500 transition-all duration-300 ease-in-out bg-transparent border border-blue-500 rounded-md h-9 hover:bg-blue-500 hover:rounded-3xl hover:text-white;
+}
+
+.swiper-button-next {
+  @apply w-12 h-12 text-center -translate-y-1/2 rounded-md bg-white text-sm cursor-pointer [&>svg]:!w-[9px]
+}
+
+.swiper-button-prev {
+  @apply w-12 h-12 text-center -translate-y-1/2 rounded-md bg-white text-sm cursor-pointer [&>svg]:!w-[9px]
+}
+
+.popups {
+  @apply fixed inset-0 w-full h-full px-4 transition-opacity duration-300 ease-in-out bg-black/80 z-[1000];
+}
+
+.checkbox {
+  @apply w-6 h-6 border appearance-none cursor-pointer flex-shrink-0 rounded-xs border-neutral-400 bg-neutral-50 checked:bg-blue-500 checked:border-blue-500 checked:bg-no-repeat checked:bg-center checked:bg-[url('/icons/checked.svg')];
+}
+
+.radio {
+  @apply w-6 h-6 flex-shrink-0 appearance-none cursor-pointer rounded-full border border-neutral-400 relative before:content-[''] before:absolute before:w-3 before:w-3 before:rounded-full before:bg-blue-500 before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:hidden checked:before:block;
+}
+
+.popups.show{
+  visibility:visible;
+  opacity:1;
+}
