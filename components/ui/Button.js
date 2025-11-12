@@ -1,6 +1,8 @@
-export default function Button({text,className=""}){
-    return(
-        <button className={`primary-btn ${className}`}>
+export default function Button({ text, className = "", type = "button" }) {
+    return (
+        <button
+            type={type}
+            className={`primary-btn ${className}`}>
             {text}
         </button>
     )

@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Input from "../ui/Input";
 import Link from "next/link";
 import Language from "../ui/Language";
+import LoginPopup from "../sections/popups/LoginPopup";
 
 const navItems = [
   {
@@ -104,6 +105,17 @@ function renderNavItems(items) {
 
 export default function Navbar() {
 
+  const [loginPopup, setLoginPopup] = useState(false);
+
+  // body scroll disable
+  useEffect(() => {
+    if (loginPopup) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [loginPopup]);
+
   return (
     <header className="bg-blue-950 relative z-[102] lg:min-h-[72px] min-h-14">
       <div className="flex justify-between items-center min-h-[inherit] wrapper">
@@ -174,6 +186,7 @@ export default function Navbar() {
             {/* login popup button */}
             <div>
               <button
+                onClick={() => setLoginPopup(true)}
                 aria-label="Login"
                 title="Login to your account"
                 className="grid w-10 h-10 cursor-pointer border border-transparent rounded-full place-items-center hover:border-[#FAFAFA] transition-all ease duration-300"
@@ -197,6 +210,9 @@ export default function Navbar() {
           <Language/>
         </div>
       </div>
+      {
+        loginPopup && <LoginPopup onClose={() => setLoginPopup(false)}/>
+      }
     </header>
   );
 }
