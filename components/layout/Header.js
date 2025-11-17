@@ -73,7 +73,7 @@ function renderNavItems(items) {
             <div className={`absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] shadow-md border border-[#FAFAFA] bg-white overflow-hidden mt-0 ${item.title === "Inform" ? "w-[500px] flex gap-4" : "w-[250px]"}`}>
 
               {
-                item.dropdown.map((sub,j) => (
+                item.dropdown.map((sub, j) => (
                   sub.items ? (
                     <div className="flex-1">
                       <h4 className="py-3 px-4 leading-6 font-semibold">{sub.label}</h4>
@@ -85,14 +85,14 @@ function renderNavItems(items) {
                         ))}
                       </ul>
                     </div>
-                  ):
-                  (
-                  <ul key={j} className="p-2 [&>li>a]:py-2 [&>li>a]:block [&>li>a]:px-4 w-[250px]">
-                    <li>
-                      <Link href={sub.href} className="hover:text-blue-500">{sub.label}</Link>
-                    </li>
-                  </ul>
-                  )
+                  ) :
+                    (
+                      <ul key={j} className="p-2 [&>li>a]:py-2 [&>li>a]:block [&>li>a]:px-4 w-[250px]">
+                        <li>
+                          <Link href={sub.href} className="hover:text-blue-500">{sub.label}</Link>
+                        </li>
+                      </ul>
+                    )
                 ))
               }
             </div>
@@ -199,19 +199,20 @@ export default function Navbar() {
             </div>
           </div>
           {/* <!-- post ad button --> */}
-          <a
-            href="post-ad.html"
+          <Link
+            href="/sell-car"
             title="Post an ad"
-            target="_blank"
             className="leading-[48px] lg:block hidden h-12 rounded-[5px] bg-[#347DFF] shadow-[0px_4px_14px_0px_rgba(0,0,0,0.15)] text-[#FAFAFA] px-6 text-base font-medium transition-all ease duration-300 hover:bg-[#1F4D9D] hover:rounded-[25px]"
-          >Post and ad</a>
+          >
+            Post and ad
+          </Link>
 
           {/* <!-- Select language dropdown --> */}
-          <Language/>
+          <Language />
         </div>
       </div>
       {
-        loginPopup && <LoginPopup onClose={() => setLoginPopup(false)}/>
+        loginPopup && <LoginPopup onClose={() => setLoginPopup(false)} />
       }
     </header>
   );

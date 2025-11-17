@@ -48,15 +48,15 @@ export default function Colors() {
                 <div className="mb-6" data-color-type="exterior-colors">
                     <h4 className="mb-6 text-base font-medium">Exterior color</h4>
                     {/*  list of colors */}
-                    <ul className="grid gap-4 grid-cols-color-grid-post [&>li>label]:cursor-pointer [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
+                    <ul className="grid gap-4 color-grid-post [&>li>label]:cursor-pointer [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
                         {colors.map((data, index) => {
                             const colorClass = getColorClass(data.label);
                             return (
-                                <li key={index} className={colorClass}>
+                                <li key={index}>
                                     <Checkbox
                                         name="colors"
                                         id={`ex-color-${index}`}
-                                        className={`bg-${colorClass} border-${colorClass} checked:bg-${colorClass} checked:border-${colorClass}`}
+                                        className={`${colorClass}`}
                                     />
                                     <Label htmlFor={`ex-color-${index}`} name={data.label} />
                                 </li>
@@ -69,11 +69,11 @@ export default function Colors() {
                 <div className="mb-6" data-color-type="interior-colors">
                     <h4 className="mb-6 text-base font-medium">Interior color</h4>
                     {/*  list of colors */}
-                    <ul className="grid gap-4 grid-cols-color-grid-post [&>li>label]:cursor-pointer [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
+                    <ul className="grid gap-4 color-grid-post [&>li>label]:cursor-pointer [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
                         {colors.map((data, index) => {
                             const colorClass = getColorClass(data.label);
                             return (
-                                <li key={index} className={colorClass}>
+                                <li key={index}>
                                     <Checkbox
                                         name="colors"
                                         id={`in-color-${index}`}
@@ -86,13 +86,12 @@ export default function Colors() {
                     </ul>
                 </div>
 
-
                 {/* Material of cars */}
                 <div>
                     <h4 className="mb-6 text-base font-medium">Interior decoration</h4>
 
                     {/*  Material */}
-                    <ul className="grid gap-4 grid-cols-color-grid-post [&>li>label]:cursor-pointer [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
+                    <ul className="grid gap-4 color-grid-post [&>li>label]:cursor-pointer [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
                         {
                             materialData.map((data,index)=>(
                                 <li key={index}>

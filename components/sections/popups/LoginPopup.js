@@ -128,11 +128,12 @@ export default function LoginPopup({ onClose }) {
 
                             {/* when user select dealer then open this one */}
                             <p className="mt-6 text-center hidden text-sm font-medium" data-tab="dealer">
-                                Don’t have an account? <Link href="/dealer/register/" className="text-blue-500 font-semibold">Register as a dealer</Link>
+                                Don’t have an account? <Link href="/register/" className="text-blue-500 font-semibold">Register as a dealer</Link>
                             </p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     )

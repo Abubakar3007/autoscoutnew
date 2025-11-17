@@ -68,6 +68,14 @@
   grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
 }
 
+.color-grid-post{
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+.featured-grid{
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+}
+
         .dropdown::-webkit-scrollbar-track{
             -webkit-box-shadow: inset 0 0 6px rgba(168, 165, 165, 0.3);
             border-radius: 6px;
@@ -190,7 +198,7 @@
 }
 
 .radio {
-  @apply w-6 h-6 flex-shrink-0 appearance-none cursor-pointer rounded-full border border-neutral-400 relative before:content-[''] before:absolute before:w-3 before:w-3 before:rounded-full before:bg-blue-500 before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:hidden checked:before:block;
+  @apply w-6 h-6 flex-shrink-0 appearance-none cursor-pointer rounded-full border border-neutral-400 relative before:content-[''] before:absolute before:h-3 before:w-3 before:rounded-full before:bg-blue-500 before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:hidden checked:before:block;
 }
 
 .popups.show{

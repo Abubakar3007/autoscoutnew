@@ -166,7 +166,6 @@ export default function Furnishing() {
         { label: "Central locking system", value: "3" },
     ];
 
-
     return (
         <div className="p-6 mb-10 rounded-md box shadow-box-shadow bg-white" data-box="furnishing">
             <Heading as="h3" className="pb-2 mb-6 text-xl font-semibold border-b border-blue-500 w-fit">Furnishing</Heading>

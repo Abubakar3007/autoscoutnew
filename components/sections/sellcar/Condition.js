@@ -48,7 +48,7 @@ export default function Contact() {
                 {/* Mileage */}
                 <div>
                     <Label htmlFor="mileage" name="Mileage" className="mb-1" />
-                    <Input id="mileage" placeholder="mileage" />
+                    <Input id="mileage" placeholder="Enter mileage" />
                 </div>
 
                 {/* Registration */}
@@ -56,9 +56,9 @@ export default function Contact() {
                     <Label htmlFor="registration-from" name="Initial registration" className="mb-1" />
                     <div className="flex gap-2">
                         {/* Registration from */}
-                        <CustomSelect data={registrationDateData} name="registration-from" placeholder="Choose" />
+                        <CustomSelect data={registrationDateData} name="registration-from" placeholder="From" />
                         {/* Registration to */}
-                        <CustomSelect data={registrationDateData} name="registration-to" placeholder="Choose" />
+                        <CustomSelect data={registrationDateData} name="registration-to" placeholder="To" />
                     </div>
                 </div>
 
@@ -73,9 +73,9 @@ export default function Contact() {
                     <Label htmlFor="next-inspection" name="Next inspection" className="mb-1" />
                     <div className="flex gap-2">
                         {/* from */}
-                        <CustomSelect data={registrationDateData} name="next-inspection" placeholder="Choose" />
+                        <CustomSelect data={registrationDateData} name="next-inspection" placeholder="From" />
                         {/* to */}
-                        <CustomSelect data={registrationDateData} name="next-inspection-to" placeholder="Choose" />
+                        <CustomSelect data={registrationDateData} name="next-inspection-to" placeholder="Top" />
                     </div>
                 </div>
 
@@ -84,9 +84,9 @@ export default function Contact() {
                     <Label htmlFor="final-inspection" name="Final inspection" className="mb-1" />
                     <div className="flex gap-2">
                         {/* from */}
-                        <CustomSelect data={registrationDateData} name="final-inspection" placeholder="Choose" />
+                        <CustomSelect data={registrationDateData} name="final-inspection" placeholder="From" />
                         {/* to */}
-                        <CustomSelect data={registrationDateData} name="final-inspection-to" placeholder="Choose" />
+                        <CustomSelect data={registrationDateData} name="final-inspection-to" placeholder="Top" />
                     </div>
                 </div>
 
@@ -94,9 +94,9 @@ export default function Contact() {
                 <div>
                     <Label htmlFor="belt-change" name="Last timing belt change" className="mb-1" />
                     <div className="flex gap-2">
-                        <CustomSelect data={registrationDateData} name="belt-change" placeholder="Choose" />
+                        <CustomSelect data={registrationDateData} name="belt-change" placeholder="From" />
                         {/* to */}
-                        <CustomSelect data={registrationDateData} name="belt-change" placeholder="Choose" />
+                        <CustomSelect data={registrationDateData} name="belt-change" placeholder="Top" />
                     </div>
                 </div>
 

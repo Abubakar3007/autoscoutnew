@@ -58,7 +58,7 @@ export default function Environment() {
 
                 {/* NEDC */}
                 <div className="flex items-start gap-4">
-                    <Radio id="nedc" name="protocal" />
+                    <Radio id="nedc" name="protocol" />
                     <label for="nedc" className="text-gray-500 cursor-pointer">
                         <span className="text-gray-800">NEDC</span><br />
                         CO2 emission and fuel consumption values ​​for vehicles according to the

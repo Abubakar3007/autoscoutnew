@@ -39,10 +39,10 @@ export default function Characteristics() {
             {/* form field */}
             <div className="grid grid-cols-2 gap-4">
                 {/* body type */}
-                {/* <div>
-                    <Label htmlFor="body-type" name="Body type"/>
+                <div>
+                    <Label htmlFor="body-type" name="Body type" className="mb-1"/>
                     <CustomSelectCheckbox data={bodyTypeData} name="body-type" placeholder="Choose" />
-                </div> */}
+                </div>
 
                 {/* seating */}
                 <div>
