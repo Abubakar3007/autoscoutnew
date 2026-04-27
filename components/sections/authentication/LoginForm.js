@@ -1,6 +1,7 @@
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import Label from "@/components/ui/Label";
+import TogglePassword from "@/components/ui/TogglePassword";
 import Link from "next/link";
 
 export default function LoginForm() {
@@ -34,26 +35,8 @@ export default function LoginForm() {
                         className="mb-1"
                     />
 
-                    <div className="relative">
-                        <Input
-                            id="password"
-                            placeholder="Enter password"
-                        />
-
-                        {/* password toggle button */}
-                        <button
-                            type="button"
-                            class="absolute right-4 top-1/2 translate-y-[-50%] password-toggle-btn"
-                        >
-                            {/* open eye */}
-                            <img src="/icons/open-eye.png" alt="show" />
-                            {/* close eye */}
-                            <img src="/icons/close-eye.png" alt="hide" class="hidden" />
-                        </button>
-
-                    </div>
+                    <TogglePassword inputId="password"/>
                 </div>
-
 
                 {/* forgot link */}
                 <div class="text-sm font-semibold text-right text-blue-500">
@@ -64,7 +47,6 @@ export default function LoginForm() {
                     </Link>
                 </div>
             </div>
-
 
             {/* <!-- submit button --> */}
             <Button

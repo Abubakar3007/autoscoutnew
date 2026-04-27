@@ -1,4 +1,5 @@
 "use client";
+import Label from "@/components/ui/Label";
 import Textarea from "@/components/ui/Textarea";
 import { useState } from "react";
 
@@ -9,10 +10,15 @@ export default function DescriptionTestNative() {
     return (
         <div className="p-6 mb-10 rounded-md box shadow-box-shadow bg-white">
             <h3 className="pb-2 mb-6 text-xl font-semibold border-b border-blue-500 w-fit">
-                Vehicle description (native textarea test)
+                Vehicle description
             </h3>
 
-            <label htmlFor="description">Description</label>
+
+            <Label
+                htmlFor="description"
+                name="Description"
+                className="mb-1"
+            />
             <Textarea
                 id="description"
                 placeholder="Write car description"

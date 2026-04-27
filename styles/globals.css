@@ -76,6 +76,10 @@
   grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
 }
 
+.image-grid{
+  grid-template-columns: repeat(auto-fill, minmax(129px, 1fr));
+}
+
         .dropdown::-webkit-scrollbar-track{
             -webkit-box-shadow: inset 0 0 6px rgba(168, 165, 165, 0.3);
             border-radius: 6px;
@@ -155,6 +159,31 @@
 .purple{
   border-color: #991289 !important;
   background-color: #991289 !important;
+}
+
+        .success{
+            color:#2E7D31;
+            border-color:#2E7D31;
+            background-color:#DCF8DD;
+        }
+
+        .error{
+            color:#E53835;
+            border-color:#E53835;
+            background-color:#FEF3ED;
+        }
+
+        .menu-list a.active{
+          background-color: #347DFF;
+          color: #fff;
+        }
+
+        .menu-list a.active svg path{
+          fill: #fff;
+        }
+
+#nprogress .bar {
+  height:5px !important;
 }
 
 .select {

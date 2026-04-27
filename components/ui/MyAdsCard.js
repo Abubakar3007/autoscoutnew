@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function ListingCard() {
+export default function MyAdsCard() {
     <div
         className="relative flex flex-col rounded-md sm:gap-4 sm:p-4 bg-gray-50 shadow-box-shadow sm:flex-row"
         data-card="car-card-2"

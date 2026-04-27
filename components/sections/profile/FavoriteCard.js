@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function FavoriteCard({ setIsOpen }) {
+export default function FavoriteCard({ setIsOpen , setIsPopup}) {
     return (
         <div className="relative rounded-md sm:p-4 card shadow-box-shadow bg-white" data-card="favorite-card">
 
@@ -103,7 +103,8 @@ export default function FavoriteCard({ setIsOpen }) {
                 <button
                     aria-label="Remove from favorite"
                     title="Remove from favorite"
-                    className="text-sm font-semibold text-[#E53835] delete-favorite">
+                    onClick={()=>setIsPopup(true)}
+                    className="text-sm font-semibold text-[#E53835] cursor-pointer">
                     <img
                         src="/icons/trash-btn.svg"
                         alt="Delete icon"

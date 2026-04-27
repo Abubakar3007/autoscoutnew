@@ -4,11 +4,14 @@ import ProfileHeader from "@/components/sections/profile/ProfileHeader";
 import ProfileSidebar from "@/components/sections/profile/ProfileSidebar";
 import SimilarVehiclePopup from "@/components/sections/profile/SimilarVehiclePopup";
 import Pagination from "@/components/ui/Pagination";
+import DeleteAdPopup from "@/components/sections/popups/DeleteAdPopup";
 import { useState } from "react";
 
 export default function Favorites() {
 
     const [isOpen, setIsOpen] = useState(false);
+
+    const [isPopup, setIsPopup] = useState(false);
 
     return (
         <section className="py-20">
@@ -18,7 +21,7 @@ export default function Favorites() {
                 <ProfileHeader />
 
                 {/* profile wrapper */}
-                <div className="flex flex-col gap-6 lg:items-center lg:flex-row">
+                <div className="flex flex-col gap-6 lg:flex-row">
 
                     <ProfileSidebar />
 
@@ -27,8 +30,14 @@ export default function Favorites() {
                     <div className="w-full">
                         {/* cards */}
                         <div className="space-y-6">
-                            <FavoriteCard setIsOpen={setIsOpen}/>
-                            <FavoriteCard setIsOpen={setIsOpen}/>
+                            <FavoriteCard
+                                setIsOpen={setIsOpen} // for similar vehicle popup
+                                setIsPopup={setIsPopup} // for delete ad popup
+                            />
+                            <FavoriteCard
+                                setIsOpen={setIsOpen} // for similar vehicle popup
+                                setIsPopup={setIsPopup} // for delete ad popup
+                            />
                         </div>
 
                         {/* Pagination */}
@@ -39,7 +48,12 @@ export default function Favorites() {
 
             {/* Similar */}
             {
-                isOpen && <SimilarVehiclePopup setIsOpen={setIsOpen}/>
+                isOpen && <SimilarVehiclePopup setIsOpen={setIsOpen} />
+            }
+
+            {/* Delete ad popup */}
+            {
+                isPopup && <DeleteAdPopup setIsPopup={setIsPopup} title="Delete ad" description="Are you sure to want to remove ad from favorite?"/>
             }
         </section>
     )

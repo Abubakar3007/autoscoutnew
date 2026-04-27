@@ -23,14 +23,11 @@ export default function Login() {
                     <div className="p-4 rounded-md sm:p-6 bg-gray-50 shadow-box-shadow">
 
                         {/* Seller and dealer tab button */}
-                        <div className="flex mb-6">
-                            <button
-
-                                className="flex-1 p-3 text-xl font-semibold border-b active boder-neutral-400 login-tab-btn cursor-pointer"
-                            >
+                        <div className="flex mb-6 border-b border-neutral-400">
+                            <button className="flex-1 p-3 text-xl font-semibold border-b-2 active border-blue-500 login-tab-btn cursor-pointer">
                                 Seller
                             </button>
-                            <button className="flex-1 p-3 text-xl font-semibold border-b boder-neutral-400 login-tab-btn cursor-pointer">Dealer</button>
+                            <button className="flex-1 p-3 text-xl font-semibold border-b-2 border-transparent login-tab-btn cursor-pointer">Dealer</button>
                         </div>
 
                         {/* <!-- heading --> */}

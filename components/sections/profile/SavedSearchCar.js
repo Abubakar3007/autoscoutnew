@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function SavedSearchCar() {
+export default function SavedSearchCar({ setIsPopup }) {
 
     const searchData = [
         { title: "Make/Model", value: "Volkswagen" },
@@ -29,6 +29,7 @@ export default function SavedSearchCar() {
                 <button
                     aria-label="Delete saved search button"
                     title="Delete save search"
+                    onClick={() => { setIsPopup(true) }}
                     className="flex-shrink-0 text-sm font-semibold text-[#E53835] cursor-pointer">
                     <img
                         src="/icons/trash-btn.svg"
@@ -70,7 +71,7 @@ export default function SavedSearchCar() {
             <div className="flex items-center justify-between pt-6 mt-6 border-t border-neutral-400">
                 <p className="text-gray-500">Saved on <strong> October 21, 2023</strong></p>
                 <Link
-                    href="listing.html"
+                    href="/listing"
                     title="Go to search result"
                     className="flex-shrink-0 sm:px-6 primary-btn-sm">
                     View result

@@ -33,13 +33,13 @@ export default function Contact() {
             <div className="grid grid-cols-2 gap-4">
                 <div>
                     <Label htmlFor="zip" name="ZIP code" className="mb-1" />
-                    <Input id="zip" placeholder="zip code" />
+                    <Input id="zip" placeholder="Enter zip code" />
                 </div>
 
                 {/* city */}
                 <div>
                     <Label htmlFor="city" name="City" className="mb-1" />
-                    <Input id="city" placeholder="city" />
+                    <Input id="city" placeholder="Enter city" />
                 </div>
             </div>
 
@@ -58,7 +58,7 @@ export default function Contact() {
                 {/* Phone number */}
                 <div>
                     <Label htmlFor="phone-number" name="Phone number" className="mb-1"/>
-                    <Input id="phone-number" placeholder="phone number" />
+                    <Input id="phone-number" placeholder="Enter phone number" />
                 </div>
             </div>
 

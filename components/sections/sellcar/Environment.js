@@ -89,7 +89,7 @@ export default function Environment() {
 
                 {/* combined  */}
                 <div>
-                    <Label htmlFor="combined" name="Combined fuel consumption" />
+                    <Label htmlFor="combined" name="Combined fuel consumption" className="mb-1"/>
                     <Input id="combined" placeholder="eg- 50mpg" />
                 </div>
 

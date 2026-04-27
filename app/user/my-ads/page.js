@@ -5,7 +5,7 @@ import ProfileHeader from "@/components/sections/profile/ProfileHeader";
 import ProfileSidebar from "@/components/sections/profile/ProfileSidebar";
 import ProfileUpdatePopup from "@/components/sections/profile/ProfileUpdatePopup";
 import SendOtpPopup from "@/components/sections/profile/SendOtpPopup";
-import ListingCard from "@/components/ui/ListingCard";
+import MyAdsCard from "@/components/ui/MyAdsCard";
 
 export default function MyAds() {
     return (
@@ -22,7 +22,7 @@ export default function MyAds() {
 
                         {/* cards */}
                         <div className="space-y-6">
-                            <ListingCard/>
+                            <MyAdsCard />
                         </div>
                     </div>
                 </div>

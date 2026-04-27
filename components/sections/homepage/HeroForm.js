@@ -148,13 +148,13 @@ export default function HeroForm() {
                     <button
                         type="submit"
                         className="w-full primary-btn"
-                        onclick="window.location.href='list_page/'"
+                        // onClick={() => router.push("/listing")}
                     >
                         <span className="align-middle">Search</span>
                         <img
                             src="/icons/search-white.svg"
                             alt="Search icon"
-                            className="inline-block ml-1"
+                            className="inline-block ml-2"
                         />
                     </button>
 

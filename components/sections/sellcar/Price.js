@@ -14,7 +14,7 @@ export default function Price() {
                 {/* Price */}
                 <div className="col-span-2">
                     <Label htmlFor="price" name="Your offer price for your vehicle:" className="mb-1"/>
-                    <Input id="price" placeholder="price" />
+                    <Input id="price" placeholder="Enter price" />
                 </div>
 
                 {/* Basis negotiation */}

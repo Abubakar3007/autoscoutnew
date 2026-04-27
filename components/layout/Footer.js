@@ -1,4 +1,5 @@
 "use client"; // for scroll-to-top button functionality
+import Link from 'next/link.js';
 import Select from '../ui/Select.js';
 import { useState, useEffect } from "react";
 export default function Footer(){
@@ -47,16 +48,16 @@ export default function Footer(){
                             <h4>Pursue</h4>
                             <ul className="space-y-2 text-base [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a:hover]:border-gray-50">
                                 <li>
-                                    <a href="/about_us/">About us</a>
+                                    <Link href="/about">About us</Link>
                                 </li>
                                 <li>
-                                    <a href="/your_advt/">Advertising</a>
+                                    <Link href="/your_advt">Advertising</Link>
                                 </li>
                                 <li>
-                                    <a href="/terms/">Conditions</a>
+                                    <Link href="/condition">Conditions</Link>
                                 </li>
                                 <li>
-                                    <a href="/data_protection/">Data protection</a>
+                                    <Link href="/data-protection">Data protection</Link>
                                 </li>
                             </ul>
                         </div>
@@ -64,10 +65,10 @@ export default function Footer(){
                             <h4>Service</h4>
                             <ul className="space-y-2 text-base [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a:hover]:border-gray-50">
                                 <li>
-                                    <a href="">Help</a>
+                                    <Link href="/help">Help</Link>
                                 </li>
                                 <li>
-                                    <a href="/contact/">Contact</a>
+                                    <Link href="/contact/">Contact</Link>
                                 </li>
                             </ul>
                         </div>
@@ -75,7 +76,7 @@ export default function Footer(){
                             <h4>Dealer</h4>
                             <ul className="space-y-2 text-base [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a:hover]:border-gray-50">
                                 <li>
-                                    <a href="/register/">Register</a>
+                                    <Link href="/register/">Register</Link>
                                 </li>
                                 <li>
                                     <a href="">Advantages</a>

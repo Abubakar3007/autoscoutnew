@@ -9,27 +9,27 @@ export default function LinksUsedCars() {
             links: [
                 {
                     title: "A1",
-                    href: "/lst/audi/a1"
+                    href: "/listing"
                 },
                 {
                     title: "A3",
-                    href: "/auto/audi/audi-a3/"
+                    href: "/listing"
                 },
                 {
                     title: "A4",
-                    href: "/lst/audi/a4"
+                    href: "/listing"
                 },
                 {
                     title: "A6",
-                    href: "/lst/audi/a6"
+                    href: "/listing"
                 },
                 {
                     title: "Q3",
-                    href: "/lst/audi/q3"
+                    href: "/listing"
                 },
                 {
                     title: "More Audi models",
-                    href: "/auto/audi/"
+                    href: "/listing"
                 },
             ]
         },
@@ -38,27 +38,27 @@ export default function LinksUsedCars() {
             links: [
                 {
                     title: "1 Series",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "3 Series",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "5 Series",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "x1",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "x3",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "More BMW models",
-                    href: ""
+                    href: "/listing"
                 },
             ]
         },
@@ -67,27 +67,27 @@ export default function LinksUsedCars() {
             links: [
                 {
                     title: "Caddy",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "Golf",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "Polo",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "Tiguan",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "Touran",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "More VW models",
-                    href: ""
+                    href: "/listing"
                 },
             ]
         },
@@ -96,27 +96,27 @@ export default function LinksUsedCars() {
             links: [
                 {
                     title: "A-Class",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "B-Class",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "C-Class",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "E-Class",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "S-Class",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "More Mercedes models",
-                    href: ""
+                    href: "/listing"
                 },
             ]
         },
@@ -125,23 +125,23 @@ export default function LinksUsedCars() {
             links: [
                 {
                     title: "Audi",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "BMW",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "VW",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "Mercedes",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "Other brands",
-                    href: ""
+                    href: "/listing"
                 },
             ]
         },
@@ -150,23 +150,23 @@ export default function LinksUsedCars() {
             links: [
                 {
                     title: "SUV",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "Sedan",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "Hatchback",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "Coupe",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "More structure types",
-                    href: ""
+                    href: "/listing"
                 },
             ]
         },
@@ -175,23 +175,23 @@ export default function LinksUsedCars() {
             links: [
                 {
                     title: "Dhaka",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "Chittagong",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "Khulna",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "Rajshahi",
-                    href: ""
+                    href: "/listing"
                 },
                 {
                     title: "More regions",
-                    href: ""
+                    href: "/listing"
                 },
             ]
         }

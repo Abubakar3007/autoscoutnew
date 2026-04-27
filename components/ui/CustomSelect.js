@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 
-export default function CustomSelect({ data = [],name, placeholder = "Choose" }) {
+export default function CustomSelect({ data = [], name, placeholder = "Choose", onSelect }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("");
   const selectRef = useRef(null);
@@ -15,6 +15,11 @@ export default function CustomSelect({ data = [],name, placeholder = "Choose" })
   const handleSelect = (item) => {
     setSelected(item.label);
     setIsOpen(false);
+
+    // ✅ trigger callback if provided
+    if (onSelect) onSelect(name, item.label);
+
+    console.log(name, item.label);
   };
 
   // close dropdown when clicking outside
@@ -40,36 +45,20 @@ export default function CustomSelect({ data = [],name, placeholder = "Choose" })
         type="button"
         onClick={handleToggle}
         className={`
-          w-full
-          h-12
-          px-4
-          pr-10
-          text-sm
-          border
-          border-neutral-400
-          rounded-md
-          bg-[url('/icons/dropdown-arrow.svg')]
-          bg-neutral-50
-          bg-[position:calc(100%-13px)_center]
-          bg-no-repeat
-          outline-none
-          transition-all
-          duration-200
-          ease-in-out
-          focus:border-blue-500
-          text-[#333]
-          cursor-pointer
-          font-medium
-          text-left
-          whitespace-nowrap
+          w-full h-12 px-4 pr-10 text-sm border border-neutral-400 rounded-md
+          bg-[url('/icons/dropdown-arrow.svg')] bg-neutral-50
+          bg-[position:calc(100%-13px)_center] bg-no-repeat outline-none
+          transition-all duration-200 ease-in-out focus:border-blue-500
+          ${selected ? 'text-[#333]' : 'text-gray-500'}
+          cursor-pointer font-medium text-left whitespace-nowrap
         `}
-        aria-label="Select brand"
+        aria-label={`Select ${name}`}
         aria-haspopup="listbox"
       >
         <span className="overflow-hidden text-ellipsis">{selected || placeholder}</span>
       </button>
 
-      {/* hidden input (for form submission) */}
+      {/* hidden input */}
       <input type="hidden" name={name} value={selected} />
 
       {/* dropdown list */}
@@ -83,7 +72,7 @@ export default function CustomSelect({ data = [],name, placeholder = "Choose" })
             onClick={() => handleSelect(item)}
             role="option"
             aria-selected={selected === item.label}
-            className = {selected===item.label?'bg-blue-500/10':'bg-transparent'}
+            className={selected === item.label ? 'bg-blue-500/10' : 'bg-transparent'}
           >
             {item.label}
           </li>

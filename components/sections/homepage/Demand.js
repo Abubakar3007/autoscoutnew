@@ -34,8 +34,7 @@ export default function Demand() {
                         carData.map((item, index) => (
                             <Link
                                 key={index}
-                                href="listing.html"
-                                target="_blank"
+                                href="/listing"
                                 title={`Find ${item.title}`}
                                 className="relative z-10 w-full h-full overflow-hidden rounded-md max-h-[260px] before:absolute before:content-[''] before:inset-0 before:w-full before:h-full before:bg-gradient-overlay group"
                             >

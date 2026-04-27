@@ -17,21 +17,123 @@ import { useState } from "react";
 
 export default function SellCar() {
 
+    const [vehicleData, setVehicleData] = useState({
+        brand: "",
+        model: "",
+        variant: "",
+        bodyType: "",
+        seating: "",
+        doors: "",
+        exteriorColors: "",
+        interiorColors: "",
+        interialDecoration: "",
+        condition: "",
+        mileage: "",
+        yearFrom: "",
+        yearTo: "",
+        owner: "",
+        inspectionFrom: "",
+        inspectionTo: "",
+        beltChangeFrom: "",
+        beltChangeTo: "",
+        conditionCheckboxes: "",
+        furnishing: "",
+        driveType: "",
+        gearbox: "",
+        performanceKW: "",
+        performanceHp: "",
+        cylinders: "",
+        gears: "",
+        displacement: "",
+        crub: "",
+        fuelType:"",
+        energySource:"",
+        fuelConsumption:"",
+        emissionsCombined:"",
+        emissionClass:"",
+    });
+
+    beltChangeFrom
     const tabData = [
-        { title: "Vehicle data", dataId: "vehicle-data", data: [] },
-        { title: "Characteristics", dataId: "features", data: [] },
-        { title: "Colors", dataId: "colors", data: [] },
-        { title: "Condition", dataId: "condition", data: [] },
-        { title: "Furnishing", dataId: "furnishing", data: [] },
-        { title: "Drive", dataId: "drive", data: [] },
-        { title: "Environment", dataId: "environment", data: [] },
+        {
+            title: "Vehicle-data",
+            dataId: "vehicle-data",
+            data: [
+                vehicleData.brand,
+                vehicleData.model,
+                vehicleData.variant
+            ].every(Boolean) ? `${vehicleData.brand}, ${vehicleData.model}, ${vehicleData.variant}` : "Please fill",
+        },
+        {
+            title: "Characteristics",
+            dataId: "features",
+            data: [
+                vehicleData.bodyType,
+                vehicleData.seating,
+                vehicleData.doors,
+            ].every(Boolean) ? `${vehicleData.bodyType}, ${vehicleData.seating}, ${vehicleData.doors}` : "Please fill",
+        },
+        {
+            title: "Colors",
+            dataId: "colors",
+            data: [
+                vehicleData.exteriorColors,
+                vehicleData.interiorColors,
+                vehicleData.interialDecoration,
+            ].every(Boolean) ? `${vehicleData.exteriorColors}, ${vehicleData.interiorColors}, ${vehicleData.interialDecoration}` : "Please fill",
+        },
+        {
+            title: "Condition",
+            dataId: "condition",
+            data: [
+                vehicleData.condition,
+                vehicleData.mileage,
+                vehicleData.yearFrom,
+                vehicleData.yearTo,
+                vehicleData.owner,
+                vehicleData.inspectionFrom,
+                vehicleData.inspectionTo,
+                vehicleData.beltChangeFrom,
+                vehicleData.beltChangeTo,
+                vehicleData.conditionCheckboxes
+            ].every(Boolean) ? `${vehicleData.condition}, ${vehicleData.mileage}, ${vehicleData.yearFrom}, ${vehicleData.yearTo}, ${vehicleData.owner}, ${vehicleData.inspectionFrom}, ${vehicleData.inspectionTo}, ${vehicleData.beltChangeFrom}, ${vehicleData.beltChangeTo}, ${vehicleData.conditionCheckboxes}` : "Please fill",
+        },
+        {
+            title: "Furnishing",
+            dataId: "furnishing",
+            data: [
+                vehicleData.furnishing
+            ].every(Boolean) ? `${vehicleData.furnishing}` : "Please fill",
+        },
+        {
+            title: "Drive",
+            dataId: "drive",
+            data: [
+                vehicleData.driveType,
+                vehicleData.gearbox,
+                vehicleData.performanceKW,
+                vehicleData.performanceHp,
+                vehicleData.cylinders,
+                vehicleData.gears,
+                vehicleData.displacement,
+                vehicleData.crub
+            ].every(Boolean) ? `${vehicleData.driveType}, ${vehicleData.gearbox}, ${vehicleData.performanceKW}, ${vehicleData.performanceHp}, ${vehicleData.cylinders}, ${vehicleData.gears}, ${vehicleData.displacement}, ${vehicleData.crub}` : "Please fill",
+        },
+        {
+            title: "Environment",
+            dataId: "environment",
+            data: [
+
+            ]
+        },
         { title: "Pictures", dataId: "pictures", data: [] },
         { title: "Description", dataId: "description", data: [] },
         { title: "Price", dataId: "price", data: [] },
         { title: "Contact", dataId: "contact", data: [] },
-    ];
+    ]
 
     const [activeTab, setActiveTab] = useState(tabData[0].dataId);
+
 
     const handleTabs = (dataId) => {
         setActiveTab(dataId);
@@ -40,6 +142,8 @@ export default function SellCar() {
         const element = document.getElementById(dataId);
         element.scrollIntoView({ behavior: "smooth" });
     };
+
+    console.log(vehicleData)
 
     return (
         <section className="py-20">
@@ -69,7 +173,12 @@ export default function SellCar() {
                     </div>
                     {/* sell car right side */}
                     <div className="w-full">
-                        <section id="vehicle-data"><VehicleData /></section>
+                        <section id="vehicle-data">
+                            <VehicleData
+                                vehicleData={vehicleData}
+                                setVehicleData={setVehicleData}
+                            />
+                        </section>
                         <section id="features"><Characteristics /></section>
                         <section id="colors"><Colors /></section>
                         <section id="condition"><Condition /></section>

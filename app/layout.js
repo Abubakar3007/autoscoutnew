@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import Navbar from "@/components/layout/Header.js";
 import Footer from "@/components/layout/Footer.js";
+import TopProgressBar from "@/components/ui/TopProgressBar";
 
 export default function RootLayout({ children }) {
   return (
@@ -21,7 +22,8 @@ export default function RootLayout({ children }) {
       <body className="text-gray-800 bg-neutral-50">
         <Navbar />
         <main>
-              {children}
+          <TopProgressBar />
+          {children}
         </main>
         <Footer />
       </body>

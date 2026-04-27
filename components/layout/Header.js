@@ -4,6 +4,7 @@ import Input from "../ui/Input";
 import Link from "next/link";
 import Language from "../ui/Language";
 import LoginPopup from "../sections/popups/LoginPopup";
+import InfoBadge from "../sections/popups/InfoBadge";
 
 const navItems = [
   {
@@ -211,6 +212,9 @@ export default function Navbar() {
           <Language />
         </div>
       </div>
+
+      <InfoBadge />
+
       {
         loginPopup && <LoginPopup onClose={() => setLoginPopup(false)} />
       }
