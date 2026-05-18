@@ -7,11 +7,9 @@ const BACKEND_PORT = 'https://localhost:5000'
 // register
 export const register = async (req, res) => {
     try {
-        const { name, email, phone, country, city, state, zip, address, username, password } = req.body;
+        const { name, email, phone, country, city, zip, address, username, password } = req.body;
 
-        console.log(name, email)
-
-        if (!name || !email || !phone || !country || !city || !state || !zip || !address || !username || !password) {
+        if (!name || !email || !phone || !country || !city || !zip || !address || !username || !password) {
             return res.status(400).json({ message: "Please fill all required information" })
         }
 
@@ -22,7 +20,7 @@ export const register = async (req, res) => {
             })
         }
 
-        const user = new User({ name, email, phone, country, city, state, zip, address, username, password });
+        const user = new User({ name, email, phone, country, city, zip, address, username, password });
         await user.save();
 
         return res.status(200).json({
