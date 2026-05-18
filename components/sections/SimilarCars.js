@@ -8,14 +8,13 @@ import "swiper/css/navigation";
 import Card from "../ui/Card";
 import Heading from "../ui/Heading";
 
-export default function SimilarCars() {
-    const cars = [1, 2, 3, 4, 5];
+export default function SimilarCars({ similarCarsData }) {
     return (
         <div class="mt-10">
             <Heading as="h2" className="text-[28px] w-fit pb-2 border-b border-blue-500 mb-10 font-semibold">Similar cars</Heading>
             {/* similar car container */}
             <Swiper
-                modules={[Navigation,Autoplay]}
+                modules={[Navigation, Autoplay]}
                 spaceBetween={24}
                 slidesPerView={3}
                 loop={true}
@@ -28,9 +27,9 @@ export default function SimilarCars() {
                 }}
                 className="pb-10"
             >
-                {cars.map((car, index) => (
-                    <SwiperSlide key={index}>
-                        <Card />
+                {similarCarsData.map((car) => (
+                    <SwiperSlide key={car.id}>
+                        <Card car={car} />
                     </SwiperSlide>
                 ))}
             </Swiper>
